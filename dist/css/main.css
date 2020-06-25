@@ -6406,6 +6406,13 @@ button.close {
 .invisible {
   visibility: hidden !important; }
 
+.round-btn-primary {
+  background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#65dcfc)) !important;
+  background: linear-gradient(to right, #00c9ff 0%, #65dcfc 100%) !important; }
+
+.round-btn-secondary {
+  background: #1d4e5b !important; }
+
 @media (min-width: 576px) {
   .float-sm-left {
     float: left !important; }
@@ -8667,6 +8674,27 @@ button.close {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
+.round-btn {
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 10em;
+  padding: 10px 20px;
+  -webkit-transition: border-radius 300ms linear;
+  transition: border-radius 300ms linear;
+  will-change: transform; }
+  .round-btn:hover, .round-btn:focus, .round-btn:active {
+    border-radius: 0;
+    color: #fff; }
+
+body {
+  background-image: url(../public/bkg.png);
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .hero-section .hero-content h1, .hero-section .hero-content .h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -8686,22 +8714,4 @@ button.close {
   font-family: "Heebo", sans-serif;
   font-weight: 400;
   color: #1d4e5b; }
-
-.hero-section .hero-content .btn-first {
-  font-family: "Heebo", sans-serif;
-  font-weight: 700;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#65dcfc));
-  background: linear-gradient(to right, #00c9ff 0%, #65dcfc 100%);
-  color: #fff;
-  border-radius: 10em;
-  padding: 13px 20px;
-  border: 2px solid transparent;
-  -webkit-transition: border-color 0.3s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;
-  transition: border-color 0.3s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out; }
-  .hero-section .hero-content .btn-first:hover {
-    border-color: #00c9ff;
-    background: transparent;
-    color: #00c9ff; }
 

@@ -1,0 +1,16 @@
+.round-btn {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 10em;
+    padding: 10px 20px;
+    transition: border-radius 300ms linear;
+    will-change: transform;
+
+    &:hover, &:focus, &:active {
+        border-radius: 0;
+        color: #fff;
+    }
+}

@@ -1,3 +1,10 @@
+body {
+    background-image: url('../images/bkg.png');
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .hero-section {
     .hero-content {
         h1 {
@@ -22,29 +29,6 @@
             font-family: $primary-font;
             font-weight: 400;
             color: $secondary-color;
-        }
-
-        .btn-first {
-            font-family: $primary-font;
-            font-weight: 700;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            background: linear-gradient(to right, #00c9ff 0%,#65dcfc 100%);
-            color: #fff;
-            border-radius: 10em;
-            padding: 13px 20px;
-            border: 2px solid transparent;
-            transition: border-color 0.3s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;
-
-            &:hover {
-                border-color: $primary-color;
-                background: transparent;
-                color: $primary-color;
-            }
-        }
-
-        .btn-second {
-
         }
     }
 }
