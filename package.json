@@ -12,8 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
+    "alpinejs": "^2.4.1",
     "bootstrap": "^5.0.0-alpha1",
-    "popper.js": "^1.16.1"
+    "gsap": "^3.3.4",
+    "popper.js": "^1.16.1",
+    "smooth-scrollbar": "^8.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

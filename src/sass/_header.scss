@@ -1,0 +1,93 @@
+.page-header {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+
+    .header-container {
+        padding: 10px 5%;
+        border-radius: 10em;
+        background-color: #fff;
+        box-shadow: 0 0 12px 7px #00000024;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .logo-container {
+            width: 40%;
+
+            @media (min-width: 576px) {
+                width: 30%;
+            }
+
+            @media (min-width: 768px) {
+                width: auto;
+            }
+        }
+
+        .menu-container {
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                list-style-type: none;
+                margin-bottom: 0;
+
+                li {
+                    padding: 0 10px;
+
+                    a {
+                        font-family: $primary-font;
+                        font-weight: 400;
+                        color: $secondary-color;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        transition: border-color 300ms linear, background 500ms ease;
+
+                        &:hover {
+                            background: $secondary-color;
+                            color: #fff;
+                            border-radius: 10em;
+                            padding: 2px 10px;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+
+                        a {
+                            background: linear-gradient(to right, #00c9ff 0%,#65dcfc 100%);
+                            color: #fff;
+                            border-radius: 10em;
+                            padding: 8px 40px;
+                            border: 1px solid transparent;
+
+                            &:hover {
+                                background: transparent !important;
+                                border-color: $primary-color;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .responsive-btn {
+            position: absolute;
+            right: 20px;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: $secondary-color;
+            font-size: 1.5rem;
+        }
+    }
+}

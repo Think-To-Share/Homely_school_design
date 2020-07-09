@@ -1,16 +1,70 @@
 .round-btn {
     font-family: $primary-font;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 0.9em;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff !important;
     border-radius: 10em;
     padding: 10px 20px;
-    transition: border-radius 300ms linear;
+    transition: border-color 300ms linear, background 500ms ease;
     will-change: transform;
 
+    @media (min-width: 1200px) {
+        font-size: 1.2em;
+    }
+
+    &.round-btn-primary {
+        &:hover {
+            background: transparent !important;
+            border-color: $primary-color;
+            color: $primary-color !important;
+        }
+    }
+
+    &.round-btn-secondary {
+        &:hover {
+            background: transparent !important;
+            border-color: $secondary-color;
+            color: $secondary-color !important;
+        }
+    }
+
     &:hover, &:focus, &:active {
-        border-radius: 0;
         color: #fff;
+    }
+}
+
+.homepage-section {
+    .section-content {
+        h2 {
+            font-family: $secondary-font;
+            font-weight: 700;
+            font-size: 1.5em;
+            color: $secondary-color;
+            margin-bottom: 20px;
+
+            @media (min-width: 576px) {
+                font-size: 1.9em;
+            }
+
+            @media (min-width: 992px) {
+                font-size: 2.3em;
+            }
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            font-family: $primary-font;
+            font-weight: 300;
+            color: $secondary-color;
+            font-size: 0.9em;
+
+            @media (min-width: 768px) {
+                width: 80%;
+            }
+        }
     }
 }

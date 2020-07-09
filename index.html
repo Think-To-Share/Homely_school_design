@@ -7,21 +7,332 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
-<body>
+<body x-data="{responsiveMenuOpen: 0}" :class="{'responsive-menu-open': responsiveMenuOpen === 1}">
+    <header class="page-header">
+        <div class="container-fluid container-lg">
+            <div class="col-12 header-container">
+                <div class="logo-container">
+                    <a href="#">
+                        <img src="./src/images/logo.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="menu-container d-none d-md-block">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <button class="responsive-btn d-md-none" @click="{responsiveMenuOpen = 1}">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <main class="main">
         <section class="hero-section">
-            <div class="container">
+            <div class="container-fluid container-lg">
                 <div class="row">
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6 hero-img">
+                        <img src="./src/images/hero-img.png" alt="" class="img-fluid">
+                    </div>
                     <div class="col-md-6 hero-content">
                         <h1>A Complete <br><span>Software</span> <br>Based Website</h1>    
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo accumsan lacus vel facilisis.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
                         <a href="#" class="btn round-btn round-btn-primary mr-3">Start Today</a>
                         <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- why important section -->
+        <section class="why-important homepage-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 order-1 order-md-0 section-content">
+                        <h2>Why is it <span>important?</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                    </div>
+    
+                    <div class="col-md-6 order-0 order-md-1 section-image">
+                        <img src="./src/images/why-important.png" class="img-fluid" alt="why is it important">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What platform include section -->
+        <section class="what-platform-include homepage-section">
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="col-md-6 section-image">
+                        <img src="./src/images/platform-include.png" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 offset-lg-1 section-content">
+                        <h2>What does the <br><span>platform</span> include?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Examination Section -->
+        <section class="online-examination homepage-section">
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="col-md-6 order-last order-md-first section-content">
+                        <h2>We Provide <span>Scrure Online Examination</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                    </div>
+
+                    <div class="col-md-6 order-first order-md-last section-image">
+                        <img src="./src/images/online-examination.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Features Section -->
+        <section class="our-features" x-data="{open: 1}">
+            <div class="container-md">
+                <div class="row">
+                    <div class="col-12 header">
+                        <h2>Our Exciting Features</h2>
+                        <p>Lorem ipsum Dummy Text</p>
+                    </div>
+                </div>
+
+                <!-- icons -->
+                <div class="row icons">
+                    <div class="col col-md-4 icon-container">
+                        <div class="main" :class="{'active': open === 1}" @click="open = 1">
+                            <img src="./src/images/feature-icon-1-normal.png" alt="" class="icon icon-normal">
+                            <img src="./src/images/feature-icon-1-active.png" alt="" class="icon icon-active">
+                        </div>
+                    </div>
+
+                    <div class="col col-md-4 icon-container">
+                        <div class="main" :class="{'active': open === 2}" @click="open = 2">
+                            <img src="./src/images/feature-icon-2-normal.png" alt="" class="icon icon-normal">
+                            <img src="./src/images/feature-icon-2-active.png" alt="" class="icon icon-active">
+                        </div>
+                    </div>
+
+                    <div class="col col-md-4 icon-container">
+                        <div class="main" :class="{'active': open === 3}" @click="open = 3">
+                            <img src="./src/images/feature-icon-3-normal.png" alt="" class="icon icon-normal">
+                            <img src="./src/images/feature-icon-3-active.png" alt="" class="icon icon-active">
+                        </div>
+                    </div>
+                </div>
+                <!-- ./icons -->
+
+                <div class="bottom-content">
+                    <div class="content" x-show="open === 1">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-5 list-part">
+                                <h3 class="heading"><span>PRINCIPAL</span> DASHBOARD</h3>
+
+                                <ul>
+                                    <li>Teacher's Attendance Check</li>
+                                    <li>New Teacher Addition</li>
+                                    <li>Automated Class Routine Creation</li>
+                                    <li>Student Admission through Online Exam</li>
+                                    <li>Teacher Leave Management</li>
+                                    <li>Student Leave Management</li>
+                                    <li>Student Fee Management</li>
+                                    <li>Exam Question Edit and Approve</li>
+                                    <li>Exam Creation</li>
+                                    <li>Study Mat Upload</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-7 image-part">
+                                <img src="./src/images/pincipal_dashboard.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" x-show="open === 2">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-5 list-part">
+                                <h3 class="heading"><span>STUDENT</span> DASHBOARD</h3>
+
+                                <ul>
+                                    <li>Teacher's Attendance Check</li>
+                                    <li>New Teacher Addition</li>
+                                    <li>Automated Class Routine Creation</li>
+                                    <li>Student Admission through Online Exam</li>
+                                    <li>Teacher Leave Management</li>
+                                    <li>Student Leave Management</li>
+                                    <li>Student Fee Management</li>
+                                    <li>Exam Question Edit and Approve</li>
+                                    <li>Exam Creation</li>
+                                    <li>Study Mat Upload</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-7 image-part">
+                                <img src="./src/images/pincipal_dashboard.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" x-show="open === 3">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-5 list-part">
+                                <h3 class="heading"><span>TEACHER</span> DASHBOARD</h3>
+
+                                <ul>
+                                    <li>Teacher's Attendance Check</li>
+                                    <li>New Teacher Addition</li>
+                                    <li>Automated Class Routine Creation</li>
+                                    <li>Student Admission through Online Exam</li>
+                                    <li>Teacher Leave Management</li>
+                                    <li>Student Leave Management</li>
+                                    <li>Student Fee Management</li>
+                                    <li>Exam Question Edit and Approve</li>
+                                    <li>Exam Creation</li>
+                                    <li>Study Mat Upload</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-7 image-part">
+                                <img src="./src/images/pincipal_dashboard.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="homepage-contact">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>Lorem ipsum Dummy Text</p>
+                        <h2>Our Exciting Features</h2>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Phone Number">
+                        <input type="text" placeholder="Email Id">
+                        <button type="submit" class="btn round-btn round-btn-primary">Submit Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section class="homepage-blogs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 header">
+                        <h2>Creative Blogs</h2>
+                        <p>Lorem ipsum Dummy Text</p>
+                    </div>
+                </div>
+
+                <div class="row blogs">
+                    <div class="col-md-4 blog">
+                        <div class="img-box">
+                            <img src="https://via.placeholder.com/563x374.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="meta">1 Jan 2020  |  By Lorem</div>
+                        <div class="title-container">
+                            <a href="#" class="title">Latest Software design in features</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 blog">
+                        <div class="img-box">
+                            <img src="https://via.placeholder.com/563x374.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="meta">1 Jan 2020  |  By Lorem</div>
+                        <div class="title-container">
+                            <a href="#" class="title">Latest Software design in features</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 blog">
+                        <div class="img-box">
+                            <img src="https://via.placeholder.com/563x374.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="meta">1 Jan 2020  |  By Lorem</div>
+                        <div class="title-container">
+                            <a href="#" class="title">Latest Software design in features</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <a href="#" class="logo">
+                                <img src="./src/images/logo.png" alt="logo">
+                            </a>
+
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+
+                            <ul class="social-media-container">
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p class="mb-0">2020 &copy; Copyright Homely School   |   All Rights Reserved   |   Design &amp; Development By <a href="https://thinktoshare.com">Think To Share</a></p>
+            </div>
+        </footer>
+
+        <div class="responsive-menu d-md-none" :class="{'is_open': responsiveMenuOpen === 1}">
+            <div class="top">
+                <button class="close-btn" @click="{responsiveMenuOpen = 0}"><i class="fas fa-times fa-2x"></i></button>
+            </div>
+
+            <div class="menu-container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
     <script src="dist/js/app.js"></script>
 </body>

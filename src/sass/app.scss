@@ -1,5 +1,13 @@
 @import "variables";
 @import "utilities";
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.css";
 @import "common";
+@import "header";
+@import "responsive-menu";
+@import "footer";
 @import "homepage";
+@import "contact";
+@import "about";
+@import "blog";
+@import "single-blog";

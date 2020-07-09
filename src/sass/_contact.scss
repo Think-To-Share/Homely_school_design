@@ -1,0 +1,44 @@
+.hero-section {
+    .contact-form {
+        width: 100%;
+        padding: 25px 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px 0px #00000028;
+
+        h1 {
+            font-family: $secondary-font;
+            font-weight: 800;
+            font-size: 1.7rem;
+            color: $secondary-color;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-family: $primary-font;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: $secondary-color;
+        }
+
+        form {
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: none;
+                border-radius: 7px;
+                background-color: #f5f5f5;
+
+                &::placeholder {
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    color: #83868c;
+                }
+            }
+        }
+    }
+}

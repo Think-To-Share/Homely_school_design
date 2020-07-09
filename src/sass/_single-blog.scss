@@ -1,0 +1,53 @@
+.single {
+    .single-blog-main {
+        margin-top: 150px;
+        min-height: 50vh;
+
+        @media (min-width: 768px) {
+            margin-top: 15vw;
+        }
+
+        .single-blog-header {
+            margin-bottom: 30px;
+
+            h1 {
+                font-family: $secondary-font;
+                font-weight: 700;
+                color: $primary-color;
+            }
+
+            .meta {
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 0.9rem;
+                color: $secondary-color;
+            }
+        }
+
+        .blog-content {
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: $secondary-font;
+                font-weight: 700;
+                color: $secondary-color;
+            }
+
+            p {
+                font-family: $primary-font;
+                font-weight: 400;
+                color: $secondary-color;
+                font-size: 0.9rem;
+            }
+
+            a {
+                font-family: $primary-font;
+                font-weight: 400;
+                font-style: italic;
+                color: $primary-color;
+            }
+        }
+    }
+}

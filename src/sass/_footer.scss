@@ -1,0 +1,103 @@
+.site-footer {
+    margin-top: 100px;
+
+    .footer-widget {
+        margin-bottom: 30px;
+
+        .logo {
+            display: inline-block;
+            width: 50%;
+            margin-bottom: 20px;
+    
+            img {
+                width: 100%;
+            }
+        }
+    
+        .description {
+            font-family: $primary-font;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: #6f6f6f;
+            margin-bottom: 10px;
+        }
+    
+        ul.social-media-container {
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+    
+            li {
+                padding: 0 10px;
+    
+                &:first-child {
+                    padding-left: 0;
+                }
+    
+                &:last-child {
+                    padding-right: 0;
+                }
+    
+                a {
+                    font-size: 20px;
+                    color: #6f6f6f;
+    
+                    &:hover {
+                        color: #505050;
+                    }
+                }
+            }
+        }
+
+        .widget-title {
+            font-family: $primary-font;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: $secondary-color;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                a {
+                    font-family: $primary-font;
+                    font-weight: 300;
+                    font-size: 0.8rem;
+                    text-decoration: none;
+                    color: #6f6f6f;
+
+                    &:hover {
+                        color: #505050;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-copyright {
+        padding: 10px 30px;
+        background-color: #1c1d3e;
+        text-align: center;
+
+        p {
+            font-family: $primary-font;
+            font-weight: 400;
+            color: #fff;
+            font-size: 0.85rem;
+
+            a {
+                color: #fff;
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
