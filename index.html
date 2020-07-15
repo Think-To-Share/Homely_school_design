@@ -34,20 +34,58 @@
 
     <main class="main">
         <section class="hero-section">
-            <div class="container-fluid container-lg">
-                <div class="row">
-                    <div class="col-md-6 hero-img">
-                        <img src="./src/images/hero-img.png" alt="" class="img-fluid">
+            <div class="container-fluid container-lg" id="homepage-slider">
+                <div class="slide-item w-100">
+                    <div class="row">
+                        <div class="col-md-6 hero-img">
+                            <img src="./src/images/hero-img.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 hero-content">
+                            <h1>A Complete <br><span>Software</span> <br>Based Website</h1>    
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                            <a href="#" class="btn round-btn round-btn-primary mr-3">Start Today</a>
+                            <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                        </div>
                     </div>
-                    <div class="col-md-6 hero-content">
-                        <h1>A Complete <br><span>Software</span> <br>Based Website</h1>    
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                        </ul>
-                        <a href="#" class="btn round-btn round-btn-primary mr-3">Start Today</a>
-                        <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                </div>
+
+                <div class="slide-item w-100">
+                    <div class="row">
+                        <div class="col-md-6 hero-img">
+                            <img src="./src/images/hero-img.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 hero-content">
+                            <h1>A Secure <br><span>Exam</span> <br>Portal</h1>    
+                            <ul>
+                                <li>Student Activity Tracking.</li>
+                                <li>Device Screen Recording.</li>
+                                <li>Mobile Responsive Platform.</li>
+                            </ul>
+                            <a href="#" class="btn round-btn round-btn-primary mr-3">Start Today</a>
+                            <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item w-100">
+                    <div class="row">
+                        <div class="col-md-6 hero-img">
+                            <img src="./src/images/hero-img.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 hero-content">
+                            <h1>A <br><span>Software</span> <br>Based Website</h1>    
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                            <a href="#" class="btn round-btn round-btn-primary mr-3">Start Today</a>
+                            <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,7 +96,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 order-1 order-md-0 section-content">
-                        <h2>Why is it <span>important?</span></h2>
+                        <h2>Why is it  <span>important?</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                         <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
                     </div>
@@ -88,7 +126,7 @@
         </section>
 
         <!-- Online Examination Section -->
-        <section class="online-examination homepage-section">
+        <section class="online-examination homepage-section pb-4">
             <div class="container-fluid container-lg">
                 <div class="row">
                     <div class="col-md-6 order-last order-md-first section-content">
@@ -97,8 +135,11 @@
                         <a href="#" class="btn round-btn round-btn-secondary">Learn More</a>
                     </div>
 
-                    <div class="col-md-6 order-first order-md-last section-image">
-                        <img src="./src/images/online-examination.png" alt="" class="img-fluid">
+                    <div class="col-md-6 order-first order-md-last section-image align-self-center">
+                        <!-- <img src="./src/images/online-examination.png" alt="" class="img-fluid"> -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TJ4I7-7LlPA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -319,6 +360,28 @@
                 <p class="mb-0">2020 &copy; Copyright Homely School   |   All Rights Reserved   |   Design &amp; Development By <a href="https://thinktoshare.com">Think To Share</a></p>
             </div>
         </footer>
+
+        <div class="quick-contact">
+            <button  data-toggle="modal" data-target="#quickContactModal"><i class="fas fa-envelope"></i></button>
+        </div>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="quickContactModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>Contact Us</h5>
+                        <!-- Close Btn -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="responsive-menu d-md-none" :class="{'is_open': responsiveMenuOpen === 1}">
             <div class="top">

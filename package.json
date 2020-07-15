@@ -16,7 +16,8 @@
     "bootstrap": "^5.0.0-alpha1",
     "gsap": "^3.3.4",
     "popper.js": "^1.16.1",
-    "smooth-scrollbar": "^8.5.2"
+    "smooth-scrollbar": "^8.5.2",
+    "tiny-slider": "^2.9.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

@@ -1,21 +1,10 @@
-body.about-body {
-    background-image: url('../images/bkg_left.png'), url('../images/bkg_right.png');
-    background-position: left top, right top;
-    background-size: 40%, 30%;
-    background-repeat: no-repeat, no-repeat;
-
-    @media (min-width: 768px) {
-        background-image: url('../images/about-us-hero-left.png'), url('../images/bkg_right.png');
-    }
-}
-
-.about-hero-section {
+.page-hero-section {
     margin-top: 150px;
 
     .hero-content {
         > h1 {
             font-family: $secondary-font;
-            font-weight: 800;
+            font-weight: 700;
             font-size: 1.7em;
             color: $secondary-color;
             margin-bottom: 10px;
@@ -24,13 +13,9 @@ body.about-body {
                 font-size: calc(1.375rem + 1.5vw);
                 margin-bottom: 20px;
             }
-
-            span {
-                color: $primary-color;
-            }
         }
 
-        > p {
+        .title-bottom * {
             font-family: $primary-font;
             font-size: 0.9rem;
             font-weight: 400;
@@ -43,7 +28,7 @@ body.about-body {
     }
 }
 
-.about-content {
+.page-content {
     margin-top: 50px;
 
     @media (min-width: 768px) {

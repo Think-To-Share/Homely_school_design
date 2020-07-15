@@ -6,7 +6,19 @@ body {
 }
 
 .hero-section {
-    margin-top: 150px;
+    padding-top: 150px;
+
+    #homepage-slider {
+        min-height: 20vw;
+
+        .slide-item {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
 
     .hero-content {
         > h1 {
@@ -134,9 +146,9 @@ body {
             padding-top: 40px;
         }
 
-        @media (min-width: 992px) {
-            padding-top: 120px;
-        }
+        // @media (min-width: 992px) {
+        //     padding-top: 120px;
+        // }
     }
 
     .section-image {
@@ -298,9 +310,13 @@ body {
 
     .form {
         margin-top: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         input {
             font-family: $primary-font;
@@ -326,7 +342,7 @@ body {
             }
 
             @media (min-width: 768px) {
-                width: auto;
+                width: 25%;
                 margin-right: 15px;
                 margin-bottom: 0;
             }

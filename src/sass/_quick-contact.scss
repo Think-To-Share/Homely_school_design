@@ -1,0 +1,36 @@
+.quick-contact {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    z-index: 900;
+    display: none;
+    transform: translateY(-10px);
+    transition: display 0.5s linear, transform 1s ease-in-out;
+
+    &.show {
+        display: block;
+        transform: translateY(0);
+    }
+    
+    button {
+        background-color: #fff;
+        color: $primary-color;
+        border: 0;
+        outline: 0;
+        font-size: 2rem;
+        padding: 14px;
+        line-height: 0;
+        border-radius: 7px;
+        box-shadow: 0 0 17px 0 #0000002e;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 10px 0 #0000002e;
+
+            i {
+                transform: none !important;
+                color: $primary-color !important;
+            }
+        }
+    }
+}
