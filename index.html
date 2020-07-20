@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homely School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body x-data="{responsiveMenuOpen: 0}" :class="{'responsive-menu-open': responsiveMenuOpen === 1}">
@@ -35,6 +35,11 @@
     <main class="main">
         <section class="hero-section">
             <div class="container-fluid container-lg" id="homepage-slider">
+                <div class="controls">
+                    <button id="previous"><i class="fas fa-angle-left"></i></button>
+                    <button id="next"><i class="fas fa-angle-right"></i></button>
+                </div>
+
                 <div class="slide-item w-100">
                     <div class="row">
                         <div class="col-md-6 hero-img">
@@ -370,14 +375,21 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title"></h5>Contact Us</h5>
+                        <h5 class="modal-title">Get in touch with us</h5>
                         <!-- Close Btn -->
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                    ...
+                        <p class="contact-number">Call us at <a href="tel:+91 8910116700">+91 8910116700</a></p>
+
+                        <form action="">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="Phone">
+                            <button class="btn btn-block round-btn round-btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

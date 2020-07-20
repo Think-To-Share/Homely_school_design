@@ -10,6 +10,36 @@ body {
 
     #homepage-slider {
         min-height: 20vw;
+        position: relative;
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            top: 40px;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            z-index: 50;
+
+            @media (min-width: 768px) {
+                width: calc(100% + 40px);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            button {
+                border: none;
+                outline: none;
+                background: #fff;
+                font-size: 2rem;
+                line-height: 0;
+                color: $secondary-color;
+                border-radius: 5px;
+                box-shadow: 0 0 4px #0000007a;
+                padding: 10px;
+            }
+        }
 
         .slide-item {
             display: none;

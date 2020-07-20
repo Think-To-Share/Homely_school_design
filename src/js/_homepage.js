@@ -54,6 +54,8 @@ window.addEventListener('scroll', () => {
 function homepageSlider() {
     let heroSection = document.querySelector('.hero-section')
     const slides = heroSection.querySelectorAll('#homepage-slider .slide-item')
+    const previousControl = heroSection.querySelector('#homepage-slider .controls #previous')
+    const nextControl = heroSection.querySelector('#homepage-slider .controls #next')
     const slideLength = slides.length;
     let currentSlide = 0;
     let scrolling = false;
@@ -61,39 +63,28 @@ function homepageSlider() {
     slides[0].classList.add('active')
     hero_animation.restart()
 
-    heroSection.addEventListener('wheel', (event) => {
-        event.preventDefault();
-        const delta = Math.sign(event.deltaY);
+    nextControl.addEventListener('click', e => {
+        if((currentSlide + 1) < slideLength) {
 
-        if(scrolling === false) {
-            scrolling = true
+            slides.forEach(slide => {
+                slide.classList.remove('active')
+            })
 
-            if(delta > 0) {
-                if((currentSlide + 1) < slideLength) {
-    
-                    slides.forEach(slide => {
-                        slide.classList.remove('active')
-                    })
-    
-                    slides[++currentSlide].classList.add('active')
-                    hero_animation.restart()
-                }
-            }else {
-                if(currentSlide > 0) {
-                    slides.forEach(slide => {
-                        slide.classList.remove('active')
-                    })
-    
-                    slides[--currentSlide].classList.add('active')
-                    hero_animation.restart()
-                }
-            }
-
-            setTimeout(() => {
-                scrolling = false
-            }, 250)
+            slides[++currentSlide].classList.add('active')
+            hero_animation.restart()
         }
     })
+
+    previousControl.addEventListener('click', e => {
+        if(currentSlide > 0) {
+            slides.forEach(slide => {
+                slide.classList.remove('active')
+            })
+
+            slides[--currentSlide].classList.add('active')
+            hero_animation.restart()
+        }
+    });
 }
 
 homepageSlider();
